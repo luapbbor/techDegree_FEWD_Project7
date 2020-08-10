@@ -4,49 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webapp Dashboard</title>
+    <link href="css/normalize.css" rel="stylesheet">
      <link href="css/style.css" rel="stylesheet">
-     <link href="css/normalize.css" rel="stylesheet">
+     
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="grid-container">
     <header>
-        <ul>
-            <li><h2>YourApp</h2></li>
-            <li>Notification</li>
-            <li>Paul Robb</li>
-        </ul>
+        <div class="mobileHeader">
+        <h1><strong>Your</strong><span>App</span></h1>
+				<div class="notificationContainer">
+					<img class="bellIcon" src="icon-bell.svg" alt="Bell icon" />
+					<div id="notifications" class="notification"></div>
+                </div>
+        </div>        
+				<img class="profileImage" src="images/member-1.jpg" alt="member-1" />
+				<h2 class="profileName">Victoria Chambers</h2>
     </header>
+    <nav>
+        <ul class="sideNav">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </nav> 
     <main>
-        <div class="sideNav">
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-                <li>Item 4</li>
-            </ul>
-        </div> 
+        
         <div class="searchContainer">
             <h2>Dashboard</h2>
             <input type="text" placeholder="Search">
         </div> 
-        <div class="trafficChart">
-            Traffic Hourly Daily Monthly weekly
-        </div>  
         <div class="smallCharts">
             <div class="dailyTraffic">
-                Daily Traffic
+                <h3>Daily Traffic</h3>
+                <div class="trafficChart">
+                    Traffic Hourly Daily Monthly weekly
+                </div>  
             </div>
             <div class="dailyTraffic">
-                Mobile users
+                <h3>Mobile users</h3>
+                <div class="pieChart">
+                Phones tablet desktop
+                </div>
             </div>
         </div>
         <div class="socialStats">
+            <h3>Social Stats</h3>
             <div class="newMembers">
                 Victoria Chambers
             </div>
             <div class="recentActivity">
+                <h3>Recent Activity</h3>
+                <div class="recentComments">
                 Victoria Chambers commented on ....
+                </div>
             </div>
         </div>
         <div class="messageAndSettings">
