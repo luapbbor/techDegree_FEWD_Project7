@@ -1,2 +1,80 @@
+/* line 1, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: "header" "header" "header" "header" "sideNav" "sideNav" "sideNav" "sideNav" "main" "main" "main" "main";
+}
+
+/* line 20, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+.flexBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* line 26, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+header {
+  background-color: yellow;
+  grid-area: header;
+}
+
+/* line 31, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+header h2, .sideNav h2, main h2 {
+  width: 80%;
+  text-align: center;
+}
+
+/* line 36, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+.sideNav {
+  background-color: red;
+  grid-area: sideNav;
+}
+
+/* line 41, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+main {
+  background-color: green;
+  grid-area: main;
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: 768px) {
+  /* line 55, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header header" "sideNav sideNav" "main main";
+  }
+  /* line 64, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  header h2, .sideNav h2, main h2 {
+    width: 40%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 75, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .grid-container {
+    grid-template-columns: 100px auto;
+    grid-template-rows: 75px auto;
+    grid-template-areas: "header header" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main";
+  }
+  /* line 90, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  header {
+    flex-wrap: nowrap;
+  }
+  /* line 94, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  header h2 {
+    width: 20%;
+  }
+  /* line 98, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .sideNav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
