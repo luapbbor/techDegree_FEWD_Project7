@@ -1,0 +1,23 @@
+$primary-color: #f33;
+
+body {
+    color: $primary-color;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .container {
+    width: 100%;
+    display: grid;
+    display: -ms-grid;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* This makes the layout responsive */
+    grid-template-rows: repeat(3, minmax(220px, 1fr));
+    grid-row-gap: 2px;
+    grid-template-areas:
+    "header   header    header"
+    "pro    3    4";
+  }
+

@@ -5,9 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webapp Dashboard</title>
      <link href="css/style.css" rel="stylesheet">
+     <link href="css/normalize.css" rel="stylesheet">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 <body>
-    
-    <script src="js/app.js"></script>
+<div class="container">
+    <header>
+        <ul>
+            <li><h2>YourApp</h2></li>
+            <li>Notification</li>
+            <li>Paul Robb</li>
+        </ul>
+    </header>
+    <main>
+        <div class="sideNav">
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div> 
+        <div class="searchContainer">
+            <h2>Dashboard</h2>
+            <input type="text" placeholder="Search">
+        </div> 
+        <div class="trafficChart">
+            Traffic Hourly Daily Monthly weekly
+        </div>  
+        <div class="smallCharts">
+            <div class="dailyTraffic">
+                Daily Traffic
+            </div>
+            <div class="dailyTraffic">
+                Mobile users
+            </div>
+        </div>
+        <div class="socialStats">
+            <div class="newMembers">
+                Victoria Chambers
+            </div>
+            <div class="recentActivity">
+                Victoria Chambers commented on ....
+            </div>
+        </div>
+        <div class="messageAndSettings">
+            <div class="messageUsers">
+                <h3>Message User</h3>
+                <input type="text" placeholder="Search for user">
+                <textarea placeholder="message for user"></textarea>
+                <input type="button" value="Send">
+            </div>
+            <div class="settings">
+                <h3>Settings</h3>
+                Send me email notifications
+                Set profile to public
+                <input type="button" value="Save">
+                <input type="button" value="cancel">
+            </div>
+        </div>
+    </main>
+    <footer></footer>    
+</div>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"$primary-color: #f33;\r\n\r\nbody {\r\n    color: $primary-color;\r\n  }\r\n\r\n  ul {\r\n    list-style-type: none;\r\n  }\r\n\r\n  .container {\r\n    width: 100%;\r\n    display: grid;\r\n    display: -ms-grid;\r\n    margin: auto;\r\n    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* This makes the layout responsive */\r\n    grid-template-rows: repeat(3, minmax(220px, 1fr));\r\n    grid-row-gap: 2px;\r\n    grid-template-areas:\r\n    \"header   header    header\"\r\n    \"pro    3    4\";\r\n  }\r\n\r\n"
+	],
+	"names": [],
+	"mappings": ";AAEA,AAAA,IAAI,CAAC;EACD,KAAK,EAHO,IAAI;CAIjB;;;AAED,AAAA,EAAE,CAAC;EACD,eAAe,EAAE,IAAI;CACtB;;;AAED,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,QAAQ;EACjB,MAAM,EAAE,IAAI;EACZ,qBAAqB,EAAE,oCAAoC;EAAE,sCAAsC;EACnG,kBAAkB,EAAE,6BAA6B;EACjD,YAAY,EAAE,GAAG;EACjB,mBAAmB,EACnB,4CACe;CAChB"
+}
