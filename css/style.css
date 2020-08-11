@@ -174,7 +174,7 @@ main {
   /* line 167, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   .grid-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr 1fr auto;
     grid-template-areas: "header header" "sideNav sideNav" "main main";
   }
   /* line 176, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
@@ -187,13 +187,12 @@ main {
 /* line 184, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .grid-container {
   display: grid;
-  background-color: purple;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 250px 2fr;
   grid-template-areas: "header" "header" "header" "header" "sideNav" "sideNav" "sideNav" "sideNav" "main" "main" "main" "main";
 }
 
-/* line 204, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 203, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .flexBox {
   display: flex;
   justify-content: center;
@@ -201,19 +200,19 @@ main {
   flex-wrap: wrap;
 }
 
-/* line 211, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 210, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .flexBox h2, .flexBox h3, p {
   width: 100%;
   text-align: center;
 }
 
-/* line 216, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 215, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 header {
   background-color: yellow;
   grid-area: header;
 }
 
-/* line 221, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 220, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .mobileHeader {
   display: flex;
   flex-wrap: nowrap;
@@ -222,14 +221,14 @@ header {
   width: 100%;
 }
 
-/* line 229, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 228, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 img {
   height: auto;
   width: 60%;
   border-radius: 50%;
 }
 
-/* line 235, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 234, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .thumbnailContainer {
   display: flex;
   flex-wrap: wrap;
@@ -237,30 +236,30 @@ img {
   width: 100%;
 }
 
-/* line 242, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 241, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .thumbnail {
   height: auto;
   width: 40%;
   border-radius: 50%;
 }
 
-/* line 248, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 247, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .icon {
   height: auto;
   width: 60px;
 }
 
-/* line 254, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 253, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 textarea {
   width: 60%;
 }
 
-/* line 258, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 257, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .socialStatsItem, p {
   width: 100%;
 }
 
-/* line 262, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 261, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .sideNav {
   display: flex;
   justify-content: space-around;
@@ -269,24 +268,24 @@ textarea {
   height: 100px;
 }
 
-/* line 270, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 269, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 main {
   background-color: cyan;
   grid-area: main;
 }
 
-/* line 275, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 274, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .newMembersItem p {
   width: 30%;
 }
 
-/* line 279, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 278, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .recentActivityItem p {
   width: 90%;
   margin: 0;
 }
 
-/* line 284, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 283, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -294,27 +293,21 @@ main {
   padding: 3px;
 }
 
-/* line 291, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 290, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
 
-/* line 296, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
-.button, select, input {
-  width: 60%;
-  margin: 5px 0;
-}
-
 /*   Slider Switch buttons  */
-/* line 303, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 298, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .switchContainer {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* line 309, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 304, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .switch {
   position: relative;
   display: inline-block;
@@ -324,7 +317,7 @@ main {
   border-radius: 20px;
 }
 
-/* line 318, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 313, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .switch::after {
   content: '';
   position: absolute;
@@ -337,17 +330,17 @@ main {
   transition: all 0.3s;
 }
 
-/* line 330, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 325, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .checkbox:checked + .switch::after {
   left: 20px;
 }
 
-/* line 334, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 329, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .checkbox:checked + .switch {
   background-color: #7983ff;
 }
 
-/* line 338, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+/* line 333, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
 .checkbox {
   display: none;
 }
@@ -357,36 +350,91 @@ main {
 /* ============================================= */
 /*   Tablet    */
 @media (min-width: 768px) {
-  /* line 350, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 345, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "header header" "sideNav sideNav" "main main";
   }
-  /* line 359, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 354, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   header h2, .sideNav h2, main h2 {
     width: 40%;
     text-align: center;
+  }
+  /* line 359, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .flexBox h2, .flexBox h3, p {
+    width: 10%;
+    text-align: center;
+  }
+  /* line 364, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .dashBoardSearch {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+  /* line 370, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .dashBoardSearch input {
+    width: 40%;
+  }
+  /* line 374, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .flexBox {
+    flex-wrap: wrap;
+  }
+  /* line 378, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .trafficContainer,
+  .dailyTrafficContainer,
+  .mobileUsersContainer,
+  .socialStatsContainer,
+  .newMembersContainer,
+  .recentActivityContainer,
+  .messageUserContainer,
+  .settingsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* line 393, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  #dashboardHeading {
+    width: 20% !important;
+  }
+  /* line 397, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .flexBox h2 {
+    width: 100%;
+    text-align: center;
+  }
+  /* line 402, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .socialStatsItem {
+    width: 30%;
+  }
+  /* line 406, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .newMembersItem, .recentActivityItem {
+    width: 50%;
+  }
+  /* line 410, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  .switchContainer, .settingsContainer p {
+    width: 22%;
   }
 }
 
 /*   Desktop    */
 @media (min-width: 1024px) {
-  /* line 370, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 421, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   .grid-container {
     grid-template-columns: 100px auto;
     grid-template-rows: 75px auto;
     grid-template-areas: "header header" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main";
   }
-  /* line 385, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 436, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   header {
     flex-wrap: nowrap;
   }
-  /* line 389, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 440, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   header h2 {
     width: 20%;
   }
-  /* line 393, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 444, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   .sideNav {
     flex-direction: column;
     justify-content: flex-start;
@@ -395,21 +443,21 @@ main {
 }
 
 @media (min-width: 1024px) {
-  /* line 403, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 454, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   .grid-container {
     grid-template-columns: 100px auto;
     grid-template-rows: 75px auto;
     grid-template-areas: "header header" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main" "sideNav main";
   }
-  /* line 418, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 469, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   header {
     flex-wrap: nowrap;
   }
-  /* line 422, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 473, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   header h2 {
     width: 20%;
   }
-  /* line 426, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
+  /* line 477, ../../../Documents/paulRobbPortfolio/techDegree_FEWD_Project7/scss/style.scss */
   .sideNav {
     flex-direction: column;
     justify-content: flex-start;

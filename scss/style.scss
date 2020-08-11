@@ -166,11 +166,11 @@ main{
 
   .grid-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 1fr 1fr auto;
     grid-template-areas:
   "header header"
   "sideNav sideNav"
-  "main main"
+  "main main";
   }
 
   header h2, .sideNav h2, main h2{
@@ -183,8 +183,7 @@ main{
 
 .grid-container {
   display: grid;
-  background-color: purple;
-  grid-template-columns: 1fr;
+ grid-template-columns: 1fr;
   grid-template-rows: 1fr 250px 2fr;
   grid-template-areas:
   "header"
@@ -293,10 +292,6 @@ main{
   -webkit-transform: rotate(-45deg);
 }
 
-.button, select, input{
-  width: 60%;
-  margin: 5px 0;
-}
 
 /*   Slider Switch buttons  */
 
@@ -360,7 +355,63 @@ main{
     width: 40%;
     text-align: center;
   }
+
+  .flexBox h2, .flexBox h3, p{
+    width: 10%;
+    text-align: center;
+    }
+
+  .dashBoardSearch {
+      display: flex;
+       width: 90%;
+      justify-content: space-between;
+    }  
+
+  .dashBoardSearch input{
+      width: 40%;
+  }  
+
+  .flexBox {
+    flex-wrap: wrap;
+}
+
+  .trafficContainer, 
+  .dailyTrafficContainer, 
+  .mobileUsersContainer, 
+  .socialStatsContainer,
+  .newMembersContainer,
+  .recentActivityContainer,
+  .messageUserContainer,
+  .settingsContainer {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #dashboardHeading {
+    width: 20% !important;
+  }
+
+ .flexBox h2 {
+    width: 100%;
+    text-align: center;
+ }
+
+ .socialStatsItem {
+   width: 30%;
+ }
+
+.newMembersItem, .recentActivityItem {
+  width: 50%;
+}
  
+.switchContainer, .settingsContainer p {
+  width: 22%;
+}
+
+
 
 }
 
