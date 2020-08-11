@@ -1,7 +1,8 @@
 .grid-container {
   display: grid;
+  background-color: purple;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 250px 2fr;
   grid-template-areas:
   "header"
   "header"
@@ -20,7 +21,13 @@
 .flexBox {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.flexBox h2, .flexBox h3, p{
+width: 100%;
+text-align: center;
 }
 
 header {
@@ -28,27 +35,132 @@ header {
   grid-area: header;
 }
 
-header h2, .sideNav h2, main h2{
-  width: 80%;
-  text-align: center;
+.mobileHeader {
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+img {
+  height: auto;
+  width: 60%;
+  border-radius: 50%;
+}
+
+.thumbnailContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.thumbnail {
+  height: auto;
+  width: 40%;
+  border-radius: 50%;
+}
+
+.icon {
+  height: auto;
+  width: 60px;
+}
+
+
+textarea {
+  width: 60%;
+}
+
+.socialStatsItem, p {
+  width: 100%;
 }
 
 .sideNav {
+  display: flex;
+  justify-content: space-around;
   background-color: red;
   grid-area: sideNav;
+  height: 100px;
 }
 
 main{
-  background-color: green;
+  background-color: cyan;
   grid-area: main;
 }
 
+.newMembersItem p {
+  width: 30%;
+}
+
+.recentActivityItem p {
+  width: 90%;
+  margin: 0;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.button, select, input{
+  width: 60%;
+  margin: 5px 0;
+}
+
+/*   Slider Switch buttons  */
+
+.switchContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.switch { 
+  position : relative ;
+  display : inline-block;
+  width : 40px;
+  height : 20px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.checkbox:checked + .switch::after {
+  left : 20px; 
+}
+
+.checkbox:checked + .switch {
+  background-color: #7983ff;
+}
+
+.checkbox { 
+  display : none;
+}
 
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
 
-// Tablet
+/*   Tablet    */
 
 @media (min-width: 768px) {
 
@@ -69,7 +181,223 @@ main{
 
 }
 
-// Desktop 
+.grid-container {
+  display: grid;
+  background-color: purple;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 250px 2fr;
+  grid-template-areas:
+  "header"
+  "header"
+  "header"
+  "header"
+  "sideNav"
+  "sideNav"
+  "sideNav"
+  "sideNav"
+  "main"
+  "main"
+  "main"
+  "main"
+}
+
+.flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexBox h2, .flexBox h3, p{
+width: 100%;
+text-align: center;
+}
+
+header {
+  background-color: yellow;
+  grid-area: header;
+}
+
+.mobileHeader {
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+img {
+  height: auto;
+  width: 60%;
+  border-radius: 50%;
+}
+
+.thumbnailContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.thumbnail {
+  height: auto;
+  width: 40%;
+  border-radius: 50%;
+}
+
+.icon {
+  height: auto;
+  width: 60px;
+}
+
+
+textarea {
+  width: 60%;
+}
+
+.socialStatsItem, p {
+  width: 100%;
+}
+
+.sideNav {
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+  grid-area: sideNav;
+  height: 100px;
+}
+
+main{
+  background-color: cyan;
+  grid-area: main;
+}
+
+.newMembersItem p {
+  width: 30%;
+}
+
+.recentActivityItem p {
+  width: 90%;
+  margin: 0;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.button, select, input{
+  width: 60%;
+  margin: 5px 0;
+}
+
+/*   Slider Switch buttons  */
+
+.switchContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.switch { 
+  position : relative ;
+  display : inline-block;
+  width : 40px;
+  height : 20px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.checkbox:checked + .switch::after {
+  left : 20px; 
+}
+
+.checkbox:checked + .switch {
+  background-color: #7983ff;
+}
+
+.checkbox { 
+  display : none;
+}
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+
+/*   Tablet    */
+
+@media (min-width: 768px) {
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+  "header header"
+  "sideNav sideNav"
+  "main main"
+  }
+
+  header h2, .sideNav h2, main h2{
+    width: 40%;
+    text-align: center;
+  }
+ 
+
+}
+
+/*   Desktop    */
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 100px auto;
+    grid-template-rows: 75px auto;
+    grid-template-areas:
+  "header header"
+  "sideNav main"
+  "sideNav main"
+  "sideNav main"
+  "sideNav main"
+  "sideNav main"
+  "sideNav main"
+  "sideNav main"
+  "sideNav main"
+  }
+
+  header {
+    flex-wrap: nowrap;
+  }
+
+  header h2 {
+    width: 20%;
+  }
+
+  .sideNav {
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+
+}
 
 @media (min-width: 1024px) {
   .grid-container {
