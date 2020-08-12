@@ -375,9 +375,19 @@ main{
     flex-wrap: wrap;
 }
 
+.chartsContainer {
+  display: flex;
+  min-height: 600px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+
+
   .trafficContainer, 
   .dailyTrafficContainer, 
-  .mobileUsersContainer, 
+  .mobileUsersContainer,
   .socialStatsContainer,
   .newMembersContainer,
   .recentActivityContainer,
@@ -420,7 +430,7 @@ main{
 @media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 100px auto;
-    grid-template-rows: 75px auto;
+    grid-template-rows: 100px auto;
     grid-template-areas:
   "header header"
   "sideNav main"
@@ -433,52 +443,198 @@ main{
   "sideNav main"
   }
 
-  header {
+  #header {
+    width: 100%;
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
-  header h2 {
+  .mobileHeader {
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .profileHeader {
     width: 20%;
-  }
-
-  .sideNav {
-    flex-direction:column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid purple;
   }
 
+  .profileHeader h2 {
+    width: 75%;
+  }
+
+  .profileThumb {
+    width: 25%;
+    height: auto;
+  }
+
+  
+  .sideNav {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+   .sideNav a {
+    padding: 10px 0;
+  }
+
+  
+  .chartsContainer {
+    min-height: 300px;
+    flex-wrap: nowrap;  
+  }
+ 
+  .dailyTrafficContainer, 
+  .mobileUsersContainer {
+    width: 48%;
+    min-height: 100%;
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+ 
+  .dailyTrafficContainer {
+    border: 1px solid red;
+  }
+
+  .mobileUsersContainer {
+    border: 1px solid green;
+  }
+
+  .membersAndActivityContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+
+  
+
+  .newMembersContainer, .recentActivityContainer {
+    display: flex;
+    justify-content: space-around;
+    color: #666;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    min-height: 100%;
+  }
+
+  .newMembersItem, .recentActivityItem {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 96%;
+    justify-content: space-around;
+   min-height: 80px;
+  }
+
+  .thumbnailContainer {
+    max-width: 20%;
+  }
+
+   .thumbnail {
+     max-width: 80%;
+     height: auto;
+   }
+
+   .newMembersText {
+     line-height: 2px;
+   }
+
+  .newMembersText, .recentActivityText {
+      width: 75%;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+  
+     }  
+
+  .newMembersText p, .recentActivityText p {
+    text-align: justify;
+    width: 90%;
+  }
+
+  .messageAndSettingsContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 96%;
+    margin-bottom: 50px;
+  }
+
+  .messageUserContainer, .settingsContainer {
+    display: flex;
+    width: 50%;
+  }
+
+  .messageUserContainer {
+    border: 1px solid red;
+  }
+
+  .messageUserForm {
+    width: 96%;
+  }
+
+  .messageUserForm input, .messageUserForm textarea, .sendButton {
+    width: 96%;
+    padding: 0 2%;
+  }
+
+  .settingsContainer {
+    flex-wrap: wrap;
+    border: 1px solid green;
+    justify-content: flex-start;
+    text-align: left !important;
+    
+   }
+
+   #settingsHeading, #messageUserHeading {
+     text-align: left;
+     padding: 0 2%;
+     margin-bottom: auto;
+   }
+
+    
+  .switchContainer {
+    display: flex;
+    width: 96%;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid brown;
+    padding: 0 2%;
+  }
+
+  .switchContainer p {
+    text-align: left;
+    width: 40%;
+  }
+
+  .saveButton, .cancelButton {
+    width: 48%;
+    margin: 10px 1%;
+  }
+ 
+  .timezoneSelect {
+    width: 96%;
+   margin: 10px 2%;
+  }
+
+  .sendButton {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+    height: 2em;
+    border: 0;
+  }
+ 
+  
+  
 
 }
 
-@media (min-width: 1024px) {
-  .grid-container {
-    grid-template-columns: 100px auto;
-    grid-template-rows: 75px auto;
-    grid-template-areas:
-  "header header"
-  "sideNav main"
-  "sideNav main"
-  "sideNav main"
-  "sideNav main"
-  "sideNav main"
-  "sideNav main"
-  "sideNav main"
-  "sideNav main"
-  }
 
-  header {
-    flex-wrap: nowrap;
-  }
-
-  header h2 {
-    width: 20%;
-  }
-
-  .sideNav {
-    flex-direction:column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-
-}
+  

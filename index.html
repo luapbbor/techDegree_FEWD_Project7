@@ -11,13 +11,13 @@
 </head>
 <body>
     <div class="grid-container">
-        <header class="flexBox">
+        <header class="flexBox" id="header">
            <div class="mobileHeader">
                 <h1><strong>Your</strong>App</h1>
                 <img src='icon-bell.svg' class="icon bell" alt="bell icon">
            </div>
            <div class="profileHeader flexBox">
-                <img src="images/member-2.jpg" class="thumbnail" alt="profilePhoto">
+                <img src="images/member-2.jpg" class="thumbnail profileThumb" alt="profilePhoto">
                 <h2>Dan Oliver</h2>
             </div>
         </header>
@@ -38,16 +38,19 @@
                 <h3>Weekly</h3>
                 <h3>Monthly</h3>
             </div>
-            <div class="dailyTrafficContainer flexBox">
-                <h2>Daily Traffic</h2>
-                <p>Insert a graph here</p>
+            <div class="chartsContainer">
+                <div class="dailyTrafficContainer flexBox">
+                    <h2 class="item">Daily Traffic</h2>
+                    <p class="item">Insert a graph here</p>
+                </div>
+                <div class="mobileUsersContainer">
+                    <h2 class="item">Mobile Users</h2>
+                    <h3 class="item">Phones</h3>
+                    <h3 class="item">Tablets</h3>
+                    <h3 class="item">Desktops</h3>
+                </div>
             </div>
-            <div class="mobileUsersContainer">
-                <h2>Mobile Users</h2>
-                <h3>Phones</h3>
-                <h3>Tablets</h3>
-                <h3>Desktops</h3>
-            </div>
+            
             <div class="socialStatsContainer flexBox">
                 <h2>Social Stats</h2>
                 <div class="socialStatsItem flexBox">
@@ -60,104 +63,129 @@
                     <img src="icon-google-plus.svg" class="icon google" alt="icon googlePlus"><span>Facebook 2,530</span> 
                 </div>
             </div>
-            <div class="newMembersContainer flexBox">
-                <h2>New Members</h2>
-                <div class="newMembersItem flexBox">
-                    <div class="thumbnailContainer">
-                        <img src="images/member-1.jpg" class="thumbnail" alt="member 1">
-                    </div>
-                    <p>Victoria Chambers</p>
-                    <p>10/15/15</p>
-                    <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
-                </div>    
-                <div class="newMembersItem flexBox">  
-                    <div class="thumbnailContainer">
-                        <img src="images/member-4.jpg" class="thumbnail" alt="member 4">
-                    </div>  
-                    <p>Dale Byrd</p>
-                    <p>10/15/15</p>
-                    <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
-                </div>      
-                <div class="newMembersItem flexBox">  
-                    <div class="thumbnailContainer">
-                        <img src="images/member-3.jpg" class="thumbnail" alt="member 3">
+            <div class="membersAndActivityContainer">
+                <div class="newMembersContainer flexBox">
+                    <h2>New Members</h2>
+                    <div class="newMembersItem flexBox">
+                        <div class="thumbnailContainer">
+                            <img src="images/member-1.jpg" class="thumbnail" alt="member 1">
+                        </div>
+                        <div class="newMembersText">
+                            <p>Victoria Chambers</p>
+                            <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+                        </div>
+                        <p>10/15/15</p>
+                        
                     </div>    
-                    <p>Dawn Wood</p>
-                    <p>10/15/15</p>
-                    <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
-                </div>      
-                <div class="newMembersItem flexBox">   
-                    <div class="thumbnailContainer">
-                        <img src="images/member-2.jpg" class="thumbnail" alt="member 2">
-                    </div>  
-                    <p>Dan Oliver</p>
-                    <p>10/15/15</p>
-                    <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
-                </div>                     
-                
-            </div>
-            <div class="recentActivityContainer flexBox">
-                <h2>Recent Activity</h2>
-                <div class="recentActivityItem flexBox">
-                    <div class="thumbnailContainer">
-                        <img src="images/member-1.jpg" class="thumbnail" alt="member 1">
+                    <div class="newMembersItem flexBox">  
+                        <div class="thumbnailContainer">
+                            <img src="images/member-4.jpg" class="thumbnail" alt="member 4">
+                        </div>
+                        <div class="newMembersText"> 
+                            <p>Dale Byrd</p>
+                            <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+                        </div>   
+                        <p>10/15/15</p>
+                    </div>      
+                    <div class="newMembersItem flexBox">  
+                        <div class="thumbnailContainer">
+                            <img src="images/member-3.jpg" class="thumbnail" alt="member 3">
+                        </div>
+                        <div class="newMembersText">   
+                            <p>Dawn Wood</p>
+                            <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+                        </div>    
+                        <p>10/15/15</p>
+                    </div>      
+                    <div class="newMembersItem flexBox">   
+                        <div class="thumbnailContainer">
+                            <img src="images/member-2.jpg" class="thumbnail" alt="member 2">
+                        </div>
+                        <div class="newMembersText">  
+                            <p>Dan Oliver</p>
+                            <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+                        </div>    
+                        <p>10/15/15</p>
+                    </div>                     
+                </div>
+            
+                <div class="recentActivityContainer flexBox">
+                    <h2>Recent Activity</h2>
+                    <div class="recentActivityItem flexBox">
+                        <div class="thumbnailContainer">
+                            <img src="images/member-1.jpg" class="thumbnail" alt="member 1">
+                        </div>
+                        <div class="recentActivityText">
+                            <p>Victoria Chambers commented on YourApp's SEO tips</p>
+                            <p><em>5 hours ago</em></p>
+                            
+                        </div>
+                        <i class="arrow right"></i>
+                    </div> 
+                    <div class="recentActivityItem flexBox">
+                        <div class="thumbnailContainer">
+                            <img src="images/member-4.jpg" class="thumbnail" alt="member 4">
+                        </div>
+                        <div class="recentActivityText">
+                            <p>Dale Byrd liked the post Facebook's changes for 2016</p>
+                            <p><em>5 hours ago</em></p>
+                        </div>
+                        <i class="arrow right"></i>
                     </div>
-                    <p>Victoria Chambers commented on YourApp's SEO tips</p>
-                    <p><em>5 hours ago</em></p>
-                    <p><i class="arrow right"></i></p>
+                    <div class="recentActivityItem flexBox">
+                        <div class="thumbnailContainer">
+                            <img src="images/member-3.jpg" class="thumbnail" alt="member 3">
+                        </div>
+                        <div class="recentActivityText">
+                            <p>Dawn Woood commented on Facebook's changes for 2016</p>
+                            <p><em>5 hours ago</em></p>
+                        </div>
+                        <i class="arrow right"></i>
+                    </div>
+                    <div class="recentActivityItem flexBox">
+                        <div class="thumbnailContainer">
+                            <img src="images/member-2.jpg" class="thumbnail" alt="member 2">
+                        </div>
+                        <div class="recentActivityText">
+                            <p>Dan Oliver posted YourApp's Seo tips</p>
+                            <p><em>1 day ago</em></p>
+                        </div>    
+                        <i class="arrow right"></i>
+                    </div>
+                </div>
+            </div>   
+            <div class="messageAndSettingsContainer">
+                <div class="messageUserContainer flexBox">
+                    <h2 id="messageUserHeading">Message User</h2>
+                    <form class="messageUserForm">
+                        <input type="text" placeholder="Search for user">
+                        <textarea placeholder="Message for user"></textarea>
+                        <button type="submit" class="button sendButton">Send</button>
+                    </form>
+                </div>
+                <div class="settingsContainer flexBox">
+                    <h2 id="settingsHeading">Settings</h2>
                     
-                </div> 
-                <div class="recentActivityItem flexBox">
-                    <div class="thumbnailContainer">
-                        <img src="images/member-4.jpg" class="thumbnail" alt="member 4">
+                    <div class="switchContainer">
+                        <p>Send Email Notifications</p>
+                        <input type="checkbox" id="toggle1" class="checkbox" />
+                        <label for="toggle1" class="switch"></label>
                     </div>
-                    <p>Dale Byrd liked the post Facebook's changes for 2016</p>
-                    <p><em>5 hours ago</em></p>
-                    <p><i class="arrow right"></i></p>
-                </div>
-                <div class="recentActivityItem flexBox">
-                    <div class="thumbnailContainer">
-                        <img src="images/member-3.jpg" class="thumbnail" alt="member 3">
+                    
+                    <div class="switchContainer">
+                        <p>Set Profile to public</p>
+                        <input type="checkbox" id="toggle2" class="checkbox" />
+                        <label for="toggle2" class="switch"></label>
                     </div>
-                    <p>Dawn Woood commented on Facebook's changes for 2016</p>
-                    <p><em>5 hours ago</em></p>
-                    <p><i class="arrow right"></i></p>
+                    <select class="timezoneSelect">
+                        <option>Timezone 1</option>
+                        <option>Timezone 2</option>
+                        <option>Timezone 3</option>
+                    </select>
+                    <input type="Button" class="button saveButton" value="Save">
+                    <input type="Button" class="button cancelButton" value="Cancel">
                 </div>
-                <div class="recentActivityItem flexBox">
-                    <div class="thumbnailContainer">
-                        <img src="images/member-2.jpg" class="thumbnail" alt="member 2">
-                    </div>
-                    <p>Dan Oliver posted YourApp's Seo tips</p>
-                    <p><em>1 day ago</em></p>
-                    <p><i class="arrow right"></i></p>
-                </div>
-            </div>
-            <div class="messageUserContainer flexBox">
-                <h2>Message User</h2>
-                <input type="text" placeholder="Search for user">
-                <textarea placeholder="Message for user"></textarea>
-                <input type="Button" class="button sendButton" value="Send">
-            </div>
-            <div class="settingsContainer flexBox">
-                <h2>Settings</h2>
-                <p>Send Email Notifications</p>
-                <div class="switchContainer">
-                    <input type="checkbox" id="toggle1" class="checkbox" />
-                    <label for="toggle1" class="switch"></label>
-                </div>
-                <p>Send Profile to public</p>
-                <div class="switchContainer">
-                    <input type="checkbox" id="toggle2" class="checkbox" />
-                    <label for="toggle2" class="switch"></label>
-                </div>
-                <select>
-                    <option>Timezone 1</option>
-                    <option>Timezone 2</option>
-                    <option>Timezone 3</option>
-                </select>
-                <input type="Button" class="button saveButton" value="Save">
-                <input type="Button" class="button cancelButton" value="Cancel">
-            </div>
+            </div>     
         </main>
 
     </div>
