@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webapp Dashboard</title>
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/toggle-switch.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
      
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
@@ -12,18 +13,18 @@
 <body class="grid-container">
 <header>
     <h1><strong>Your</strong>App</h1>
-    <div class="bellIcon">
-    <img src="icons/icon-bell.svg" alt="Bell icon">
+    <div class="bellIconContainer">
+        <img src="icons/icon-bell.svg" class="bellIcon" alt="Bell icon">
     </div>
     <div id="notifications">
      <!-- (container element for our notifications) -->
      </div>
      <div class="profileContainer">
-     <img src="images/member-2.jpg" class="profileImage" alt="Profile Image">
-     <h3>Dale Byrd</h3>
+        <img src="images/member-2.jpg" class="profileImage" alt="Profile Image">
+        <h3>Dale Byrd</h3>
     </div>
 </header>
-<Nav>
+<nav>
     <a href="#"><img src="icon-dashboard.svg" alt="dashboard icon"></a>
     <a href="#"><img src="icon-members.svg" alt="members icon"></a>
     <a href="#"><img src="icon-visits.svg" alt="visits icon"></a>
@@ -69,6 +70,7 @@
            <canvas id="mobileUsers-chart"></canvas>
         </div>
     </section>
+    
     <div class="social-container">
         <div class="social-image">
             <svg
@@ -144,6 +146,7 @@
             <p>2,530</p>
         </div>
     </div>
+
     <!-- new members widget -->
     <section class="members">
         <h3>New Members</h3>
@@ -241,8 +244,32 @@
     <!-- local settings widget -->
     <section class="settings">
         <h3>Settings</h3>
-        <!-- custom CSS toggle code-->
-        <!-- custom CSS toggle code-->
+        <label class="switch-light switch-material" onclick="">
+            <input type="checkbox">
+          
+            <strong>
+              Send email notifications
+            </strong>
+          
+            <span class="on-off-toggle">
+              <span class="off">Off</span>
+              <span class="on">On</span>
+              <a></a>
+            </span>
+        </label>
+        <label class="switch-light switch-material" onclick="">
+            <input type="checkbox">
+          
+            <strong>
+              Set profile to public
+            </strong>
+          
+            <span class="on-off-toggle">
+              <span class="off">Off</span>
+              <span class="on">On</span>
+              <a></a>
+            </span>
+        </label>
         <select class="form-field" id="timezone">
         <option disabled selected>Select a Timezone</option>
         <option>Eastern</option>

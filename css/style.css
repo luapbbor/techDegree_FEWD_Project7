@@ -21,10 +21,6 @@ a {
     ;
 }
 
-img {
-    width: 60%;
-    height: auto;
-}
 
 .profileImage {
     width: 40%;
@@ -42,7 +38,7 @@ header {
     padding-bottom: 10px;
 }
 
-.bellIcon {
+.bellIconContainer {
     width: 20%;
     height: auto;
     padding-left: 10px;
@@ -54,20 +50,17 @@ header {
     align-items: center;
 }
 
-.profileImage {
-    padding-right: 10px;
-}
-
 nav {
     grid-area: nav;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-color: lightgreen;
 }
 
 nav a {
     width: 24%;
+    padding: 6px 6px;
 }
 
 main {
@@ -175,6 +168,18 @@ flex-wrap: wrap;
     margin-bottom: 10px;
 }
 
+.settings label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.on-off-toggle {
+    margin-left: 20px;
+}
+
 .settings-button {
     display: flex;
     justify-content: center;
@@ -204,21 +209,157 @@ flex-wrap: wrap;
     "header header"
     "nav main";
     }
+
+    header {
+    flex-wrap: nowrap;
+    align-items: center;
+     }
+
+    header h1 {
+        padding-left: 10px;
+        margin-right: auto;
+    }
+    
+    .bellIcon {
+        width: 15%;
+        height: auto;
+    }
+    
+    .profileContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profileImage {
+        width: 30%;
+        height: auto;
+        border-radius: 50%;
+    }
+    
+    .bellIconContainer {
+        width: 30%;
+        text-align: right;
+        height: auto;
+        padding-left: 10px;
+   }
+   
+
+    nav {
+     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    }
+
+    nav a {
+        width: 96%;
+        height: 50px;
+        text-align: center;
+    }
+
+    .main-header{
+     flex-wrap: nowrap;
+     justify-content: space-between;
+    }
+
+    .main-header h2 {
+        width: 30%;
+        margin-right: auto;
+    }
+
+    .main-header-search {
+        display: flex;
+        justify-content: flex-end;
+        width: 70%;
+       padding-right: 10px;        
+    }
+
+    .main-header-search input {
+        text-align: right;
+        
+    }
+
+    .social-container {
+         flex-wrap: nowrap;
+         justify-content: space-evenly;
+   }
+
+    .socialIcon {
+        margin-left: 20px;
+    }
+
+    .social-text {
+        padding-left: 20px;
+    }
+
+    .members-container{
+        width: 90%;
+        padding: 10px 0;
+        border-bottom: 1px solid black;
+        justify-content: space-between;
+     
+    }
+
+    .members, .activity {
+        flex-wrap: wrap;
+    }
+
+    .activity-container {
+        width: 90%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    .members h3, .activity h3 {
+        text-align: center;
+        width: 100%;
+    
+    }
+
+    .members-container img, .activity-container img{
+        width: 10%;
+        height: auto;
+      }
+
+    .activity-text, .members-text {
+        width: 80%;
+        line-height: 10px;
+        padding-left: 20px;
+    }
+    
+    
+    .profile-image {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .message {
+        margin-top: 10px;
+    }
+
+    .message h3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    
     .main {
         grid-template-columns: 50% ;
     }   
 
-    .traffic, .social {
-        grid-column: 1 / span 2;
+    .traffic, .social-container {
+        grid-column: 1 / 2;
     }
 
     .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
+        grid-column: 2 / 1;
     }
 
     .widget-container-full {
         width: 90vw;
         }
+
     .widget-container-half {
             width: 45vw;
     }
