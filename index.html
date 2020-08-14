@@ -5,190 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webapp Dashboard</title>
     <link href="css/normalize.css" rel="stylesheet">
-     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
      
      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
-<body>
-    <div class="grid-container">
-        <header class="flexBox" id="header">
-           <div class="mobileHeader">
-                <h1><strong>Your</strong>App</h1>
-                <img src='icon-bell.svg' class="icon bell" alt="bell icon">
-           </div>
-           <div class="profileHeader flexBox">
-                <img src="images/member-2.jpg" class="thumbnail profileThumb" alt="profilePhoto">
-                <h2>Dan Oliver</h2>
-            </div>
-        </header>
-        <aside class="sideNav flexBox">
-            <a href="#"><img src="icon-dashboard.svg" class="icon members" alt="icon members"></a>
-            <a href="#"><img src="icon-members.svg" class="icon members" alt="icon members"></a>
-            <a href="#"><img src="icon-visits.svg" class="icon visits" alt="icon visits"></a>
-            <a href="#"><img src="icon-settings.svg" class="icon settings" alt="icon settings"></a>
-        </aside>
-        <main class="flexBox">
-            <div class="dashBoardSearch flexBox">
-                <h2 id="dashboardHeading">Dashboard</h2>
-                <input type="text" class="search">
-            </div>
-            <div class="trafficContainer flexBox">
-                <h2>Traffic</h2>
-                <h3>Daily</h3>
-                <h3>Weekly</h3>
-                <h3>Monthly</h3>
-            </div>
-            <div class="chartsContainer">
-                <div class="dailyTrafficContainer flexBox">
-                    <h2 class="item">Daily Traffic</h2>
-                    <p class="item">Insert a graph here</p>
-                </div>
-                <div class="mobileUsersContainer">
-                    <h2 class="item">Mobile Users</h2>
-                    <h3 class="item">Phones</h3>
-                    <h3 class="item">Tablets</h3>
-                    <h3 class="item">Desktops</h3>
-                </div>
-            </div>
-            
-            <div class="socialStatsContainer flexBox">
-                <h2>Social Stats</h2>
-                <div class="socialStatsItem flexBox">
-                    <img src="icon-twitter.svg" class="icon twitter" alt="icon twitter"><span>Twitter 10,345</span> 
-                </div>
-                <div class="socialStatsItem flexBox">
-                    <img src="icon-facebook.svg" class="icon facebook" alt="icon facebook"><span>Facebook 8,379</span> 
-                </div>
-                <div class="socialStatsItem flexBox">
-                    <img src="icon-google-plus.svg" class="icon google" alt="icon googlePlus"><span>Facebook 2,530</span> 
-                </div>
-            </div>
-            <div class="membersAndActivityContainer">
-                <div class="newMembersContainer flexBox">
-                    <h2>New Members</h2>
-                    <div class="newMembersItem flexBox">
-                        <div class="thumbnailContainer">
-                            <img src="images/member-1.jpg" class="thumbnail" alt="member 1">
-                        </div>
-                        <div class="newMembersText">
-                            <p>Victoria Chambers</p>
-                            <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
-                        </div>
-                        <p>10/15/15</p>
-                        
-                    </div>    
-                    <div class="newMembersItem flexBox">  
-                        <div class="thumbnailContainer">
-                            <img src="images/member-4.jpg" class="thumbnail" alt="member 4">
-                        </div>
-                        <div class="newMembersText"> 
-                            <p>Dale Byrd</p>
-                            <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
-                        </div>   
-                        <p>10/15/15</p>
-                    </div>      
-                    <div class="newMembersItem flexBox">  
-                        <div class="thumbnailContainer">
-                            <img src="images/member-3.jpg" class="thumbnail" alt="member 3">
-                        </div>
-                        <div class="newMembersText">   
-                            <p>Dawn Wood</p>
-                            <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
-                        </div>    
-                        <p>10/15/15</p>
-                    </div>      
-                    <div class="newMembersItem flexBox">   
-                        <div class="thumbnailContainer">
-                            <img src="images/member-2.jpg" class="thumbnail" alt="member 2">
-                        </div>
-                        <div class="newMembersText">  
-                            <p>Dan Oliver</p>
-                            <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
-                        </div>    
-                        <p>10/15/15</p>
-                    </div>                     
-                </div>
-            
-                <div class="recentActivityContainer flexBox">
-                    <h2>Recent Activity</h2>
-                    <div class="recentActivityItem flexBox">
-                        <div class="thumbnailContainer">
-                            <img src="images/member-1.jpg" class="thumbnail" alt="member 1">
-                        </div>
-                        <div class="recentActivityText">
-                            <p>Victoria Chambers commented on YourApp's SEO tips</p>
-                            <p><em>5 hours ago</em></p>
-                            
-                        </div>
-                        <i class="arrow right"></i>
-                    </div> 
-                    <div class="recentActivityItem flexBox">
-                        <div class="thumbnailContainer">
-                            <img src="images/member-4.jpg" class="thumbnail" alt="member 4">
-                        </div>
-                        <div class="recentActivityText">
-                            <p>Dale Byrd liked the post Facebook's changes for 2016</p>
-                            <p><em>5 hours ago</em></p>
-                        </div>
-                        <i class="arrow right"></i>
-                    </div>
-                    <div class="recentActivityItem flexBox">
-                        <div class="thumbnailContainer">
-                            <img src="images/member-3.jpg" class="thumbnail" alt="member 3">
-                        </div>
-                        <div class="recentActivityText">
-                            <p>Dawn Woood commented on Facebook's changes for 2016</p>
-                            <p><em>5 hours ago</em></p>
-                        </div>
-                        <i class="arrow right"></i>
-                    </div>
-                    <div class="recentActivityItem flexBox">
-                        <div class="thumbnailContainer">
-                            <img src="images/member-2.jpg" class="thumbnail" alt="member 2">
-                        </div>
-                        <div class="recentActivityText">
-                            <p>Dan Oliver posted YourApp's Seo tips</p>
-                            <p><em>1 day ago</em></p>
-                        </div>    
-                        <i class="arrow right"></i>
-                    </div>
-                </div>
-            </div>   
-            <div class="messageAndSettingsContainer">
-                <div class="messageUserContainer flexBox">
-                    <h2 id="messageUserHeading">Message User</h2>
-                    <form class="messageUserForm">
-                        <input type="text" placeholder="Search for user">
-                        <textarea placeholder="Message for user"></textarea>
-                        <button type="submit" class="button sendButton">Send</button>
-                    </form>
-                </div>
-                <div class="settingsContainer flexBox">
-                    <h2 id="settingsHeading">Settings</h2>
-                    
-                    <div class="switchContainer">
-                        <p>Send Email Notifications</p>
-                        <input type="checkbox" id="toggle1" class="checkbox" />
-                        <label for="toggle1" class="switch"></label>
-                    </div>
-                    
-                    <div class="switchContainer">
-                        <p>Set Profile to public</p>
-                        <input type="checkbox" id="toggle2" class="checkbox" />
-                        <label for="toggle2" class="switch"></label>
-                    </div>
-                    <select class="timezoneSelect">
-                        <option>Timezone 1</option>
-                        <option>Timezone 2</option>
-                        <option>Timezone 3</option>
-                    </select>
-                    <input type="Button" class="button saveButton" value="Save">
-                    <input type="Button" class="button cancelButton" value="Cancel">
-                </div>
-            </div>     
-        </main>
-
+<body class="grid-container">
+<header>
+    <h1><strong>Your</strong>App</h1>
+    <div class="bellIcon">
+    <!-- -- div (to contain the bell icon)
+    -- svg -->
     </div>
+    <div id="notifications">
+     <!-- (container element for our notifications) -->
+     </div>
+     <div class="profileContainer">
+    <!-- -- img
+    -- h3 (or similar element) -->
+    </div>
+</header>
+<Nav>
+    <a href="#"><img src="icon-dashboard.svg" alt="dashboard icon"></a>
+    <a href="#"><img src="icon-members.svg" alt="dashboard icon"></a>
+    <a href="#"><img src="icon-visits.svg" alt="dashboard icon"></a>
+    <a href="#"><img src="icon-settings.svg" alt="dashboard icon"></a>
+</nav>
+<main>
+    <div class="main-header">
+        <h2 class="headline">Dashboard</h2>
+        <div class="main-header-search">
+        <input type="search" placeholder="Search..." />
+        </div>
+    </div>
+    <!-- alert banner -->
+    <div class="alert" id="alert" >
+    <!-- JS will insert alert here -->
+    </div>
+    <!-- line graph charts -->
+    <section class="traffic">
+    <div class="traffic-header">
+    <h3>Traffic</h3>
+    <ul class="traffic-nav">
+    <li class="traffic-nav-link">Hourly</li>
+    <li class="traffic-nav-link">Daily</li>
+    <li class="traffic-nav-link active">Weekly</li>
+    <li class="traffic-nav-link">Monthly</li>
+    </ul>
+    
+    </div>
+    <div class="widget-container-full">
+    <!-- element line graph will attach to -->
+    <img src="images/lineChartPlaceholder.png">
+    <canvas id="traffic-chart"></canvas>
+    </div>
+    </section>
+    <!-- bar graph -->
+    <section class="daily">
+        <h3>Daily Traffic</h3>
+        <div class="widget-container-half">
+        <!-- element bar graph will attach to -->
+        <img src="images/barChartPlaceHolder.png">
+        <canvas id="daily-chart"></canvas>
+        </div>
+    </section>
+    <!-- donut graph -->
+    <section class="mobile-users">
+        <h3>Mobile Users</h3>
+        <div class="widget-container-half">
+        <!-- element bar graph will attach to -->
+        <img src="images/donutChartPlaceholder.png">
+        <canvas id="mobileUsers-chart"></canvas>
+        </div>
+    </section>
+    <div class="social-container">
+        <div class="social-image">
+        <!-- inline SVG not included for brevity -->
+        </div>
+        <div class="social-text">
+        <p>Twitter</p>
+        <p>10,345</p>
+        </div>
+        <div class="social-image">
+        <!-- inline SVG not included for brevity -->
+        </div>
+        <div class="social-text">
+        <p>Facebook</p>
+        <p>8,739</p>
+        </div>
+        <div class="social-image">
+            <!-- inline SVG not included for brevity -->
+            </div>
+            <div class="social-text">
+            <p>Google+</p>
+            <p>2,530</p>
+        </div>
+    </div>
+    <!-- new members widget -->
+    <section class="members">
+        <h3>New Members</h3>
+        <div class="members-container">
+        <img src="images/member-2.jpg"
+        class="profile-image">
+        <div class="members-text">
+        <p>Victoria Chambers</p>
+        <a href="#">victoria.chambers80@example.com</a>
+        </div>
+        <p>10/15/15</p>
+        </div>
+     <!-- recent activity widget -->
+    <section class="activity">
+        <h3>Recent Activity</h3>
+        <div class="activity-container">
+        <img src="images/member-2.jpg"
+        class="profile-image">
+        <div class="members-text">
+        <p>Victoria Chambers commented on YourApp's SEO page</p>
+        <p><em>5 hours ago</em></p>
+        </div>
+        <p>></p>
+    </div>
+
+    <!-- messaging widget -->
+    <section class="message">
+        <h3>Message User</h3>
+        <form class="widget-container">
+        <input type="text" placeholder="Search for user"
+        class="form-field" id="userField">
+        <textarea placeholder="Message for user" class="form-area"
+        id= "messageField" ></textarea>
+        <button class="button-primary" id="send">Send</button>
+        </form>
+    </section>
+   
+    
+    <!-- local settings widget -->
+    <section class="settings">
+        <h3>Settings</h3>
+        <!-- custom CSS toggle code-->
+        <!-- custom CSS toggle code-->
+        <select class="form-field" id="timezone">
+        <option disabled selected>Select a Timezone</option>
+        <option>Eastern</option>
+        <!-- more options -->
+        </select>
+        <div class="settings-button" >
+        <button class="button-primary" id="save">Save</button>
+        <button class="button-disabled" id="cancel">Cancel</button>
+        </div>
+    </section>
+    
+    
+        
+</main>
+
 <script src="js/app.js"></script>
 </body>
 </html>
