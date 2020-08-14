@@ -1,17 +1,16 @@
-const alertBox = document.querySelector(".alertBox");
+// const alertBox = document.querySelector(".alertBox");
 
-const closeAlert = document.querySelector("#closeAlert");
+// const closeAlert = document.querySelector("#closeAlert");
 
-closeAlert.addEventListener('click', () => {
-    alertBox.style.display = "none";
-});
+// closeAlert.addEventListener('click', () => {
+//     alertBox.style.display = "none";
+// });
 
 
 
 // Traffic line chart
 
-
-let trafficCanvas = document.getElementById('trafficCanvas');
+let trafficCanvas = document.getElementById('traffic-chart');
 Chart.defaults.global.elements.line.tension = 0;
 let trafficData = {
 labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -51,7 +50,7 @@ options: trafficOptions
 
 
 // Daily Traffic bar chart
-let dailyTrafficCanvas = document.getElementById('dailyTrafficCanvas');
+let dailyTrafficCanvas = document.getElementById('daily-chart');
 
 const dailyTrafficData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
@@ -87,7 +86,7 @@ let barChart = new Chart(dailyTrafficCanvas, {
 
 // Mobile chart
 
-const mobileCanvas = document.getElementById("mobileChart");
+const mobileCanvas = document.getElementById("mobileUsers-chart");
 
 const mobileData = {
     labels: ["Desktop", "Tablet", "Phones"],

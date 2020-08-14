@@ -13,28 +13,27 @@
 <header>
     <h1><strong>Your</strong>App</h1>
     <div class="bellIcon">
-    <!-- -- div (to contain the bell icon)
-    -- svg -->
+    <img src="icons/icon-bell.svg" alt="Bell icon">
     </div>
     <div id="notifications">
      <!-- (container element for our notifications) -->
      </div>
      <div class="profileContainer">
-    <!-- -- img
-    -- h3 (or similar element) -->
+     <img src="images/member-2.jpg" class="profileImage" alt="Profile Image">
+     <h3>Dale Byrd</h3>
     </div>
 </header>
 <Nav>
     <a href="#"><img src="icon-dashboard.svg" alt="dashboard icon"></a>
-    <a href="#"><img src="icon-members.svg" alt="dashboard icon"></a>
-    <a href="#"><img src="icon-visits.svg" alt="dashboard icon"></a>
-    <a href="#"><img src="icon-settings.svg" alt="dashboard icon"></a>
+    <a href="#"><img src="icon-members.svg" alt="members icon"></a>
+    <a href="#"><img src="icon-visits.svg" alt="visits icon"></a>
+    <a href="#"><img src="icon-settings.svg" alt="settings icon"></a>
 </nav>
 <main>
     <div class="main-header">
         <h2 class="headline">Dashboard</h2>
         <div class="main-header-search">
-        <input type="search" placeholder="Search..." />
+            <input type="search" placeholder="Search..." />
         </div>
     </div>
     <!-- alert banner -->
@@ -43,59 +42,104 @@
     </div>
     <!-- line graph charts -->
     <section class="traffic">
-    <div class="traffic-header">
-    <h3>Traffic</h3>
-    <ul class="traffic-nav">
-    <li class="traffic-nav-link">Hourly</li>
-    <li class="traffic-nav-link">Daily</li>
-    <li class="traffic-nav-link active">Weekly</li>
-    <li class="traffic-nav-link">Monthly</li>
-    </ul>
-    
-    </div>
-    <div class="widget-container-full">
-    <!-- element line graph will attach to -->
-    <img src="images/lineChartPlaceholder.png">
-    <canvas id="traffic-chart"></canvas>
-    </div>
+        <div class="traffic-header">
+            <h3>Traffic</h3>
+            <ul class="traffic-nav">
+            <li class="traffic-nav-link">Hourly</li>
+            <li class="traffic-nav-link">Daily</li>
+            <li class="traffic-nav-link active">Weekly</li>
+            <li class="traffic-nav-link">Monthly</li>
+            </ul>
+        </div>
+        <div class="widget-container-full">
+            <canvas id="traffic-chart"></canvas>
+        </div>
     </section>
     <!-- bar graph -->
     <section class="daily">
         <h3>Daily Traffic</h3>
         <div class="widget-container-half">
-        <!-- element bar graph will attach to -->
-        <img src="images/barChartPlaceHolder.png">
-        <canvas id="daily-chart"></canvas>
+            <canvas id="daily-chart"></canvas>
         </div>
     </section>
     <!-- donut graph -->
     <section class="mobile-users">
         <h3>Mobile Users</h3>
         <div class="widget-container-half">
-        <!-- element bar graph will attach to -->
-        <img src="images/donutChartPlaceholder.png">
-        <canvas id="mobileUsers-chart"></canvas>
+           <canvas id="mobileUsers-chart"></canvas>
         </div>
     </section>
     <div class="social-container">
         <div class="social-image">
-        <!-- inline SVG not included for brevity -->
+            <svg
+            class="socialIcon"
+            height="60"
+            width="60"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <g transform="scale(0.75)">
+              <circle cx="40" cy="40" r="40" />
+              <path
+                transform="translate(20 24) scale(1.25)"
+                class="socialIconFill"
+                d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"
+              />
+            </g>
+          </svg>
         </div>
         <div class="social-text">
-        <p>Twitter</p>
-        <p>10,345</p>
+            <p>Twitter</p>
+            <p>10,345</p>
         </div>
         <div class="social-image">
-        <!-- inline SVG not included for brevity -->
+            <svg class="socialIcon" 
+            height="60"
+            width="60"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <g transform="scale(0.75)">
+                <circle cx="40" cy="40" r="40" />
+                <path 
+                transform="translate(12 12)"
+                class="socialIconFill" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+            </g>
+            </svg>
+            
         </div>
         <div class="social-text">
-        <p>Facebook</p>
-        <p>8,739</p>
+            <p>Facebook</p>
+            <p>8,739</p>
         </div>
         <div class="social-image">
-            <!-- inline SVG not included for brevity -->
-            </div>
-            <div class="social-text">
+            <svg class="socialIcon" 
+            height="60"
+            width="60"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <g transform="scale(0.75)">
+                <circle cx="40" cy="40" r="40" />
+                <path 
+                transform="translate(24 24)"
+                class="socialIconFill" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
+                    c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
+                    c-0.3-0.2-0.5-0.4-0.6-0.4c-0.2,0-0.5,0-1,0c-0.7,0-1.4,0-2,0.1c-0.7,0.1-1.4,0.2-2.1,0.5c-0.7,0.2-1.3,0.5-1.9,0.9s-1,0.8-1.3,1.4
+                    c-0.3,0.6-0.5,1.3-0.5,2.1c0,0.9,0.2,1.7,0.7,2.3c0.5,0.7,1.1,1.2,1.8,1.6s1.5,0.7,2.3,0.9s1.6,0.3,2.4,0.3c0.8,0,1.5-0.1,2.2-0.2
+                    c0.7-0.2,1.3-0.4,1.9-0.8c0.6-0.3,1.1-0.8,1.4-1.4C17.5,27.2,17.7,26.5,17.7,25.7z M15.4,9.1c0-0.8-0.1-1.6-0.3-2.5
+                    c-0.2-0.9-0.5-1.7-0.9-2.5c-0.4-0.8-0.9-1.5-1.6-2c-0.7-0.5-1.5-0.8-2.3-0.8c-1.2,0-2.1,0.4-2.8,1.3c-0.7,0.9-1,1.9-1,3.2
+                    c0,0.6,0.1,1.2,0.2,1.9c0.1,0.7,0.4,1.3,0.7,2c0.3,0.7,0.7,1.3,1.1,1.8c0.4,0.5,0.9,1,1.5,1.3c0.6,0.3,1.2,0.5,1.9,0.5
+                    c1.2,0,2.1-0.4,2.7-1.2C15.1,11.4,15.4,10.4,15.4,9.1z M12.9,0h8.4l-2.6,1.5h-2.6c0.9,0.6,1.6,1.4,2.1,2.4s0.8,2.1,0.8,3.2
+                    c0,0.9-0.1,1.8-0.4,2.5c-0.3,0.7-0.7,1.3-1.1,1.8c-0.4,0.4-0.8,0.9-1.3,1.2c-0.4,0.4-0.8,0.8-1.1,1.2c-0.3,0.4-0.4,0.8-0.4,1.3
+                    c0,0.3,0.1,0.7,0.3,1c0.2,0.3,0.5,0.6,0.8,0.9c0.3,0.3,0.7,0.6,1.1,0.9c0.4,0.3,0.8,0.7,1.2,1.1c0.4,0.4,0.8,0.8,1.1,1.3
+                    c0.3,0.5,0.6,1,0.8,1.6c0.2,0.6,0.3,1.3,0.3,2c0,2.1-0.9,3.9-2.7,5.4c-1.9,1.7-4.6,2.5-8.1,2.5c-0.8,0-1.5-0.1-2.3-0.2
+                    c-0.8-0.1-1.6-0.3-2.3-0.6c-0.8-0.3-1.5-0.7-2.1-1.1c-0.6-0.4-1.1-1-1.5-1.7C1,27.6,0.8,26.9,0.8,26c0-0.8,0.2-1.6,0.7-2.6
+                    c0.4-0.8,1-1.5,1.8-2.1c0.8-0.6,1.8-1.1,2.8-1.4c1-0.3,2-0.5,3-0.7c0.9-0.1,1.9-0.2,2.9-0.3c-0.8-1.1-1.2-2-1.2-2.9
+                    c0-0.2,0-0.3,0-0.5c0-0.1,0.1-0.3,0.1-0.4c0-0.1,0.1-0.2,0.2-0.4c0.1-0.2,0.1-0.3,0.1-0.4c-0.5,0.1-1,0.1-1.3,0.1
+                    c-1.9,0-3.5-0.6-4.9-1.9c-1.4-1.3-2-2.8-2-4.7c0-1.8,0.6-3.4,1.8-4.8C6,1.7,7.5,0.8,9.3,0.4C10.5,0.1,11.7,0,12.9,0z M32.8,4.9v2.5
+                    h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z"/>
+            </g>    
+            </svg>
+        </div>
+        <div class="social-text">
             <p>Google+</p>
             <p>2,530</p>
         </div>
@@ -104,26 +148,82 @@
     <section class="members">
         <h3>New Members</h3>
         <div class="members-container">
-        <img src="images/member-2.jpg"
-        class="profile-image">
-        <div class="members-text">
-        <p>Victoria Chambers</p>
-        <a href="#">victoria.chambers80@example.com</a>
+            <img src="images/member-1.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="members-text">
+            <p>Victoria Chambers</p>
+            <a href="#">victoria.chambers80@example.com</a>
+            </div>
+            <p>10/15/15</p>
         </div>
-        <p>10/15/15</p>
+        <div class="members-container">
+            <img src="images/member-2.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="members-text">
+            <p>Dale Byrd</p>
+            <a href="#">dale.byrd82@example.com</a>
+            </div>
+            <p>10/15/15</p>
         </div>
+        <div class="members-container">
+            <img src="images/member-3.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="members-text">
+            <p>Dawn Wood</p>
+            <a href="#">dawn.wood16@example.com</a>
+            </div>
+            <p>10/15/15</p>
+        </div>
+        <div class="members-container">
+            <img src="images/member-4.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="members-text">
+            <p>Dan Oliver</p>
+            <a href="#">dan.oliver@example.com</a>
+            </div>
+            <p>10/15/15</p>
+        </div>
+    </section>
      <!-- recent activity widget -->
     <section class="activity">
         <h3>Recent Activity</h3>
         <div class="activity-container">
-        <img src="images/member-2.jpg"
-        class="profile-image">
-        <div class="members-text">
-        <p>Victoria Chambers commented on YourApp's SEO page</p>
-        <p><em>5 hours ago</em></p>
+            <img src="images/member-1.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="activity-text">
+            <p>Victoria Chambers commented on YourApp's SEO page</p>
+            <p><em>5 hours ago</em></p>
+            </div>
+            <p><i class="arrow right"></i></p>
         </div>
-        <p>></p>
-    </div>
+        <div class="activity-container">
+            <img src="images/member-2.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="activity-text">
+            <p>David Byrd liked the post Facebook's changes for 2016</p>
+            <p><em>5 hours ago</em></p>
+            </div>
+            <p><i class="arrow right"></i></p>
+        </div>
+        <div class="activity-container">
+            <img src="images/member-3.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="activity-text">
+            <p>Dawn Wood commended on Facebook's changes for 2016</p>
+            <p><em>5 hours ago</em></p>
+            </div>
+            <p><i class="arrow right"></i></p>
+        </div>
+        <div class="activity-container">
+            <img src="images/member-4.jpg"
+            class="profile-image" alt="Profile Image">
+            <div class="activity-text">
+            <p>Dan Oliver posted YourApp's SEO Tips</p>
+            <p><em>1 day ago</em></p>
+            </div>
+            <p><i class="arrow right"></i></p>
+        </div>
+    </section>
 
     <!-- messaging widget -->
     <section class="message">
@@ -146,7 +246,9 @@
         <select class="form-field" id="timezone">
         <option disabled selected>Select a Timezone</option>
         <option>Eastern</option>
-        <!-- more options -->
+        <option>Central</option>
+        <option>Mountain</option>
+        <option>Pacific</option>
         </select>
         <div class="settings-button" >
         <button class="button-primary" id="save">Save</button>
