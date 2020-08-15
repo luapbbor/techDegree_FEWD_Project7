@@ -50,6 +50,10 @@ header {
     align-items: center;
 }
 
+.profileContainer h3 {
+    padding-left: 10px;
+}
+
 nav {
     grid-area: nav;
     display: flex;
@@ -135,10 +139,21 @@ flex-wrap: wrap;
     border-bottom: 1px solid black;
 }
 
+.activity-thumb, .members-thumb {
+    display: flex;
+   width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+
 .members-container img, .activity-container img{
-    width: 50%;
+    width: 100%;
     height: auto;
  
+}
+
+.members-text, .activity-text {
+    width: 70%;
 }
 
 .profile-image {
@@ -193,14 +208,14 @@ flex-wrap: wrap;
     text-align: center;
 }
 
-
-
 .widget-container-full, .widget-container-half {
     width: 95vw;
     }
+/* ------------------------------------------------------------------
+     ------------------------ Media Queries ------------------------
+   ------------------------------------------------------------------  */
 
-
-    
+/* Tablet */
 
 @media (min-width: 768px) {
     .grid-container {
@@ -316,13 +331,20 @@ flex-wrap: wrap;
     
     }
 
+    .activity-thumb, .members-thumb {
+        display: flex;
+       width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+
     .members-container img, .activity-container img{
-        width: 10%;
+        width: 100%;
         height: auto;
       }
 
     .activity-text, .members-text {
-        width: 80%;
+        width: 70%;
         line-height: 10px;
         padding-left: 20px;
     }
@@ -335,7 +357,7 @@ flex-wrap: wrap;
     }
 
     .message {
-        margin-top: 10px;
+         margin-top: 10px;
     }
 
     .message h3 {
@@ -343,18 +365,18 @@ flex-wrap: wrap;
         text-align: center;
     }
 
-    
+    .widget-container {
+        width: 90%;
+    }
+
+    #messageField {
+        height: 80px;
+    }
+
     .main {
         grid-template-columns: 50% ;
     }   
 
-    .traffic, .social-container {
-        grid-column: 1 / 2;
-    }
-
-    .mobile, .activity, .settings {
-        grid-column: 2 / 1;
-    }
 
     .widget-container-full {
         width: 90vw;
@@ -365,5 +387,97 @@ flex-wrap: wrap;
     }
     
  
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    
+    .social-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-text {
+        width: 20%;
+    }
+    
+    .members, .activity {
+         align-items: flex-start;
+     }
+ 
+    .members-text {
+       width: 70%;
+       padding-left: 0;
+    }
+
+    .members-text p  {
+        line-height: 1;
+        width: 70%;
+      margin-bottom: 0;
+    }
+
+
+    .members-text a {
+        width: 70%;
+    }
+
+    .activity-text {
+        width: 80%;
+        padding-left: 5px;
+    }
+
+    .activity-text p {
+        line-height: 1;
+        margin: 0;
+    }
+
+    .members-container {
+        height: 71px;
+        max-height: 75px;
+   }
+
+    .activity-container {
+        height: 71px;
+        max-height: 75px;
+      margin: 0;
+    }
+
+   
+    .activity-thumb, .members-thumb {
+        display: flex;
+       width: 40px;
+        height: 40px;
+        margin-left: 20px;
+    }
+
+    .members-container img{
+        width: 100%;
+        height: auto;
+    }
+
+    .activity-container img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .datePosted {
+        padding-bottom: 5px;
+    }
+
+    .traffic, .social-container {
+        grid-column: 1 / span 2;
+        }
+
+    .mobile,  .settings {
+      grid-column: 2 / span 1;
+    }
+
+   
+
+   
 }
     
