@@ -1,11 +1,19 @@
-// const alertBox = document.querySelector(".alertBox");
+const alertBanner = document.getElementById("alert");
+// create the html for the banner
+alertBanner.innerHTML =
+`<div class="alert-banner">
+<p class="alert-banner-text"><strong>Alert:</strong>&nbsp; You have <strong>&nbsp; 6 &nbsp;</strong> overdue tasks
+to complete</p>
+<p class="alert-banner-close">x</p>
+</div>`
 
-// const closeAlert = document.querySelector("#closeAlert");
-
-// closeAlert.addEventListener('click', () => {
-//     alertBox.style.display = "none";
-// });
-
+alertBanner.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains("alert-banner-close")) {
+    alertBanner.style.display = "none"
+    }
+});
+    
 
 
 // Traffic line chart
