@@ -14,12 +14,29 @@
 <header>
     <h1><strong>Your</strong>App</h1>
     <div class="bellIconContainer">
-        <img src="icons/icon-bell.svg" class="bellIcon" alt="Bell icon">
+        <img src="icons/icon-bell.svg" class="bellIcon notification" alt="Bell icon">
+        <span class="dot notification"></span>
     </div>
     <div id="notifications">
-     <!-- (container element for our notifications) -->
-     </div>
-     <div class="profileContainer">
+        <!-- The Modal -->
+        <div id="notificationsModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>You have 3 new notifications</h2>
+                </div>
+                <ul>
+                    <li>Vicoria Chambers sent you a message</li>
+                    <li>Victoria Chambers liked your post</li>
+                    <li>Dan oliver shared your post</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="profileContainer">
         <img src="images/member-2.jpg" class="profileImage" alt="Profile Image">
         <h3>Dale Byrd</h3>
     </div>
@@ -46,10 +63,10 @@
         <div class="traffic-header">
             <h3>Traffic</h3>
             <ul class="traffic-nav">
-            <li class="traffic-nav-link">Hourly</li>
-            <li class="traffic-nav-link">Daily</li>
-            <li class="traffic-nav-link active">Weekly</li>
-            <li class="traffic-nav-link">Monthly</li>
+            <li class="traffic-nav-link" id="hourly">Hourly</li>
+            <li class="traffic-nav-link" id="daily">Daily</li>
+            <li class="traffic-nav-link active" id="weekly">Weekly</li>
+            <li class="traffic-nav-link" id="monthly">Monthly</li>
             </ul>
         </div>
         <div class="widget-container-full">
