@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    color: #6b6967;
+    font-family: 'Nunito', sans-serif;
+}
+
 ul {
     list-style-type: none;
 }
@@ -9,6 +14,19 @@ ul {
 a {
     text-decoration: none;
 }
+
+input, textarea, select{
+    background-color: #f5f3f1;
+}
+
+input {
+    border: 1px solid #6b6967;
+}
+
+input:focus{
+    border: 1px solid #6b6967;
+}
+
 
 .grid-container {
     display: grid;
@@ -25,7 +43,9 @@ a {
     width: 40%;
     height: auto;
     border-radius: 50%;
+ 
 }
+
 
 header {
     grid-area: header;
@@ -43,6 +63,7 @@ header {
     width: 20%;
     height: auto;
     padding-left: 10px;
+    
 }
 
 .bellIcon {
@@ -142,7 +163,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
+background-color: #f5f3f1;
+padding-bottom: 20px;
 }
+
+
 
 .alert {
     display: flex;
@@ -150,7 +175,7 @@ flex-wrap: wrap;
     align-items: center;
     background-color: #a09bff;
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
     border-radius: 5px;
 }
 
@@ -358,6 +383,8 @@ flex-wrap: wrap;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 5px;
+        border-left: 1px solid grey;
     }
 
     .profileImage {
@@ -389,11 +416,15 @@ flex-wrap: wrap;
     .main-header{
      flex-wrap: nowrap;
      justify-content: space-between;
+     padding-bottom: 0;
     }
 
     .main-header h2 {
         width: 30%;
         margin-right: auto;
+        background-color: white;
+        margin: 0;
+        padding: 20px 0;
     }
 
     .main-header-search {
@@ -403,9 +434,9 @@ flex-wrap: wrap;
        padding-right: 10px;        
     }
 
+
     .main-header-search input {
-        text-align: right;
-        
+        text-align: right;    
     }
 
     .alert {
@@ -415,7 +446,7 @@ flex-wrap: wrap;
         align-items: center;
      
         width: 100%;
-        margin: 0;
+        margin: 10px 0;
         padding: 0 5%;
     }
 
