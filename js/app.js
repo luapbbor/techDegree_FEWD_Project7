@@ -116,8 +116,7 @@ let trafficChart = new Chart(trafficCanvas, {
 hourly.addEventListener('click', () => {
   for (let i = 0; i < lineChartOptions.length; i++) {
     const lineOptionsText = lineChartOptions[i].textContent;
-    console.log(lineOptionsText);
-    
+     
     if (lineOptionsText === "Hourly") {
       // adds the class "active" to the hourly div
       hourly.className += " " + "active";
@@ -170,7 +169,7 @@ hourly.addEventListener('click', () => {
 daily.addEventListener('click', () => {
   for (let i = 0; i < lineChartOptions.length; i++) {
     const lineOptionsText = lineChartOptions[i].textContent;
-    console.log(lineOptionsText);
+   
     
     if (lineOptionsText === "Daily") {
       // adds the class "active" to the hourly div
@@ -223,7 +222,6 @@ daily.addEventListener('click', () => {
 weekly.addEventListener('click', () => {
   for (let i = 0; i < lineChartOptions.length; i++) {
     const lineOptionsText = lineChartOptions[i].textContent;
-    console.log(lineOptionsText);
     
     if (lineOptionsText === "Weekly") {
       // adds the class "active" to the hourly div
@@ -277,7 +275,7 @@ weekly.addEventListener('click', () => {
 monthly.addEventListener('click', () => {
   for (let i = 0; i < lineChartOptions.length; i++) {
     const lineOptionsText = lineChartOptions[i].textContent;
-    console.log(lineOptionsText);
+    
     
     if (lineOptionsText === "Monthly") {
       // adds the class "active" to the hourly div
@@ -429,4 +427,71 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
     }
 });
-        
+
+
+
+// ---------------------------------------------
+//  Save settings to local storage
+// ---------------------------------------------
+const sendEmailCheckbox = document.querySelector("#sendEmailCheckbox");
+const saveProfileCheckbox = document.querySelector("#saveProfileCheckbox");
+const saveButton = document.querySelector("#save");
+const cancelButton = document.querySelector("#cancel");
+const timezone = document.querySelector("#timezone");
+const eastern = document.querySelector("#eastern");
+
+
+
+
+
+// loads the settings from local storage when the page loads
+window.onload = () => {
+  loadSettings();
+};
+
+
+// When the save button is clicked
+saveButton.addEventListener('click', () => {
+  // Check if local storage is available on users browser
+if (typeof(Storage) !== "undefined") {
+  
+  // saves the setting to local storage
+  localStorage.setItem("sendEmails", sendEmailCheckbox.checked);
+    
+     // saves the setting to local storage
+   localStorage.setItem("saveProfile", saveProfileCheckbox.checked);
+   // saves the selected timezone
+   localStorage.setItem("savedTimezone", timezone.value);
+  } else {
+  alert("The settings cannot be saved due to the javascript options set in your browser")
+}
+});
+
+
+// This function loads the settings from local storage
+function loadSettings () {
+  let checkEmail = localStorage.getItem("sendEmails");
+  if (checkEmail == "true") {
+    sendEmailCheckbox.checked = true;
+  } else {
+    sendEmailCheckbox.checked = false;
+  }
+  
+  let saveProfile = localStorage.getItem("saveProfile");
+  if(saveProfile == "true") {
+    saveProfileCheckbox.checked = true;
+  } else {
+    saveProfileCheckbox.checked = false;
+  }
+  timezone.value = localStorage.getItem('savedTimezone');
+}
+
+// When clicking the cancel button this removes all the local storage 
+cancelButton.addEventListener('click', () => {
+  localStorage.removeItem("sendEmails");
+  localStorage.removeItem("saveProfile");
+  localStorage.removeItem("savedTimezone");
+  })
+
+
+

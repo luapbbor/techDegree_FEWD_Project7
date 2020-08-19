@@ -166,17 +166,26 @@ flex-wrap: wrap;
     line-height: 8px;
 }
 
+.traffic-nav-link:hover {
+    cursor: pointer;
+}
+
 .traffic-header ul {
     display: flex;
 }
 
+
 .traffic-header ul li {
-    padding: 0 2px;
+        padding: 6px 4px;
 }
 
 .active {
     font-size: 1.1em;
     font-weight: bold;
+    background-color: #a09bff;
+    color: white;
+    border-radius: 2px;
+    padding: 5px 5px;
 }
 
 .headline, .traffic-header h3, .daily h3, .mobile-users h3{
@@ -247,6 +256,7 @@ flex-wrap: wrap;
     width: 100%;
 }
 
+/* The arrows in the recent activity widget */
 .arrow {
     border: solid #7c7ac7;
     border-width: 0 3px 3px 0;
@@ -339,6 +349,10 @@ flex-wrap: wrap;
         width: 15%;
         height: auto;
     }
+
+    .bellIcon:hover {
+        transform: rotate(-15deg) scale(1.1,1.1);
+     }
     
     .profileContainer {
         display: flex;
@@ -422,7 +436,11 @@ flex-wrap: wrap;
     .alert-banner-close {
         margin-left: auto;
         width: 4%;
-   
+         
+    }
+
+    .alert-banner-close:hover {
+        cursor: pointer;
     }
 
     .social-container {
@@ -534,6 +552,8 @@ flex-wrap: wrap;
         width: 10%;
         height: auto;
     }
+
+    
       
     .social-container {
         display: flex;

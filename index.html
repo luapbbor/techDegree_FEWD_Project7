@@ -259,11 +259,15 @@
     <section class="message">
         <h3>Message User</h3>
         <form class="widget-container">
-        <input type="text" placeholder="Search for user"
-        class="form-field" id="userField">
-        <textarea placeholder="Message for user" class="form-area"
-        id= "messageField" ></textarea>
-        <button class="button-primary" id="send">Send</button>
+           <input type="text" placeholder="Search for user" class="form-field" id="userField" list="usersList">
+           <datalist id="usersList">
+                <option value="Victoria Chambers">
+                <option value="Dale Byrd">
+                <option value="Dawn Wood">
+                <option value="Dan Oliver">
+            </datalist>
+            <textarea placeholder="Message for user" class="form-area" id= "messageField" ></textarea>
+            <button class="button-primary" id="send">Send</button>
         </form>
     </section>
    
@@ -271,35 +275,35 @@
     <!-- local settings widget -->
     <section class="settings">
         <h3>Settings</h3>
-        <label class="switch-light switch-material" onclick="">
-            <input type="checkbox">
+        <label class="switch-light switch-material">
+            <input type="checkbox" id="sendEmailCheckbox">
           
             <strong>
               Send email notifications
             </strong>
           
-            <span class="on-off-toggle">
-              <span class="off">Off</span>
-              <span class="on">On</span>
+            <span class="on-off-toggle" id="sendEmailToggle" >
+                <span class="off" id="sendEmailOff">Off</span>
+                <span class="on" id="sendEmailOn">On</span>
               <a></a>
             </span>
         </label>
-        <label class="switch-light switch-material" onclick="">
-            <input type="checkbox">
+        <label class="switch-light switch-material">
+            <input type="checkbox" id="saveProfileCheckbox">
           
             <strong>
               Set profile to public
             </strong>
           
             <span class="on-off-toggle">
-              <span class="off">Off</span>
-              <span class="on">On</span>
+              <span class="off" id="saveProfileOff">Off</span>
+              <span class="on" id="saveProfileOn">On</span>
               <a></a>
             </span>
         </label>
         <select class="form-field" id="timezone">
         <option disabled selected>Select a Timezone</option>
-        <option>Eastern</option>
+        <option id="eastern">Eastern</option>
         <option>Central</option>
         <option>Mountain</option>
         <option>Pacific</option>
@@ -309,7 +313,6 @@
         <button class="button-disabled" id="cancel">Cancel</button>
         </div>
     </section>
-    
     
         
 </main>
