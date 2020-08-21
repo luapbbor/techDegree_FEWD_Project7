@@ -17,6 +17,7 @@ a {
 
 input, textarea, select{
     background-color: #f5f3f1;
+    outline: none;
 }
 
 input {
@@ -40,7 +41,7 @@ input:focus{
 }
 
 .profileImage {
-    width: 40%;
+    width: 20%;
     height: auto;
     border-radius: 50%;
  
@@ -67,7 +68,7 @@ header {
 }
 
 .bellIcon {
-    width: 50%;
+    width: 40px;
     height: auto;
 }
 
@@ -148,7 +149,7 @@ nav {
 }
 
 nav a {
-    width: 24%;
+    width: 40px;
     padding: 6px 6px;
 }
 
@@ -167,19 +168,33 @@ background-color: #f5f3f1;
 padding-bottom: 20px;
 }
 
-
+.main-header-search input {
+    background-color: white;
+}
 
 .alert {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: #a09bff;
     width: 100%;
-    margin: 0;
+    padding: 0 10px;
     border-radius: 5px;
 }
 
+.alert-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.alert-banner-text {
+    width: 90%;
+}
+
+.alert-banner-text p {
+    margin: 0 10px;
+}
 .alert-banner-close {
+    display: inline-block;
     text-align: right;
 }
 
@@ -218,68 +233,136 @@ padding-bottom: 20px;
     text-align: center;
 }
 
-.daily, .mobile-users, .traffic, .social-container, .members, .members-container, .activity, .activity-container, .message, .widget-container, .settings, .settings-button{
+.daily, .mobile-users, .traffic, .message, .widget-container, .settings, .settings-button{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.social-container {
-    align-items: center;
-    margin: 20px 0;
-}
-
-
-.social-text {
+.social-container, .members, .members-container, .activity, .activity-container {
     display: flex;
-    width: 70%;
-    padding-left: 40px;
+    align-items: center;
 }
 
-.social-text p {
-    padding: 0 5px;
+
+
+.social-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
 }
 
+.social-item {
+    display: flex;
+    width: 80%;
+    background-color: #f5f3f1;
+    border: 1px solid #6b6967;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 10px 0;
+}
+
+.social-image {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+
+.socialIcon {
+    width: 40px;
+    height: 40px;
+}
 .socialIcon circle {
-    fill:#a09bff
+    fill:#a09bff;
 }
 
 .socialIconFill {
     fill:white;
 }
 
-.members-container, .activity-container{
-    width: 90%;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
+
+.social-text {
+   font-size: 0.8em;
+
+}
+
+.social-text-title {
+   font-weight: bold;
+   color: #807bc9;
+}
+
+.social-text-number {
+    font-size: 2em;
+}
+
+.social-text p {
+    margin: 0 8px;
+}
+
+
+.members-container{
+   width: 100%;
+   border-bottom: 1px solid black;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 0.8em;
+   padding: 10px 5px;
+
+}
+
+.members, .activity {
+   flex-wrap: wrap;
+}
+
+
+
+.activity-container {
+   width: 100%;
+   justify-content: space-around;
+   border-bottom: 1px solid black;
+   align-items: center;
+   font-size: 0.8em;
+   padding: 10px 5px;
+}
+
+.members h3, .activity h3 {
+   text-align: center;
+   width: 100%;
+
 }
 
 .activity-thumb, .members-thumb {
-    display: flex;
-   width: 80px;
-    height: 80px;
-    margin-left: 20px;
+   display: flex;
+  width: 40px;
+   height:40px;
+   margin-left: 10px;
 }
 
 .members-container img, .activity-container img{
-    width: 100%;
-    height: auto;
- 
+   width: 100%;
+   height: auto;
+ }
+
+.activity-text, .members-text {
+   width: 90%;
+   padding: 0 5px;
+   margin:0;
 }
 
-.members-text, .activity-text {
-    width: 70%;
+.members-text p, .activity-text p {
+    margin: 4px 2px;
 }
+
 
 .profile-image {
-    height: 100%;
-    width: auto;
-    border-radius: 50%;
+   width: 100%;
+   height: auto;
+   border-radius: 50%;
 }
 
-.activity-text {
-    width: 100%;
-}
+
+
 
 /* The arrows in the recent activity widget */
 .arrow {
@@ -297,6 +380,10 @@ padding-bottom: 20px;
 #userField, #messageField, .button-primary, #timezone, .settings h3, .button-disabled{
     width: 80%;
     margin-bottom: 10px;
+}
+
+.widget-container {
+    width: 100%;
 }
 
 .settings label {
@@ -319,7 +406,8 @@ padding-bottom: 20px;
 
 }
 
-.settings h3 {
+.settings h3, .message h3 {
+    width: 90%;
     text-align: center;
 }
 
@@ -476,67 +564,38 @@ padding-bottom: 20px;
     }
 
     .social-container {
-         flex-wrap: nowrap;
-         justify-content: space-evenly;
-   }
+        flex-wrap:nowrap;
+        justify-content: space-evenly;
+    }
+
+    .social-item {
+        display: flex;
+        width: 30%;
+        align-items: center;
+        padding: 10px 10px;
+    }
+
+    .social-image {
+        display: flex;
+        width: 80px;
+        height: 80px;
+    }
 
     .socialIcon {
-        margin-left: 20px;
+        width: 80px;
+        height: 80px;
     }
 
-    .social-text {
-        padding-left: 20px;
+    .twitterG, .facebookG, .googlePlusG {
+        transform: scale(1.5);
     }
 
-    .members-container{
-        width: 90%;
-        padding: 10px 0;
-        border-bottom: 1px solid black;
-        justify-content: space-between;
-     
-    }
 
     .members, .activity {
-        flex-wrap: wrap;
-    }
+        margin: 0 2%;
+     }
 
-    .activity-container {
-        width: 90%;
-        justify-content: space-around;
-        margin-bottom: 10px;
-    }
-
-    .members h3, .activity h3 {
-        text-align: center;
-        width: 100%;
     
-    }
-
-    .activity-thumb, .members-thumb {
-        display: flex;
-       width: 60px;
-        height: 60px;
-        margin-left: 20px;
-    }
-
-    .members-container img, .activity-container img{
-        width: 100%;
-        height: auto;
-      }
-
-    .activity-text, .members-text {
-        width: 70%;
-        line-height: 10px;
-        padding-left: 20px;
-    }
-    
-    
-    .profile-image {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-    }
-
     .message {
          margin-top: 10px;
     }
@@ -590,8 +649,6 @@ padding-bottom: 20px;
     .social-container {
         display: flex;
         width: 100%;
-        justify-content: center;
-        align-items: center;
     }
 
     .social-text {
